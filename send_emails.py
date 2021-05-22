@@ -17,15 +17,13 @@ def Send_email():
 
 
 
-    Panos = Contact(name='Panos',first_part='pyannakopoulos',last_part='uniwa.gr')
-    Dad = Contact(name='Dad',first_part='cklaouda',last_part='otenet.gr')
-    Mom = Contact(name='Mom',first_part='christinaklaoudatou',last_part='yahoo.de')
-    Stavros = Contact(name='Stavros',first_part='stavrosklaoudatos1',last_part='gmail.com')
-    Leo = Contact(name='Leo',first_part='leo.vournas',last_part='gmail.com')
-    Elias = Contact(name='Elias',first_part='elias.bourlas', last_part='gmail.com')
-    Karolos = Contact(name='Karolos',first_part='karolos.bourlas', last_part='icloud.com')
-    AntonisMag = Contact(name='AntonisMag',first_part='antonismagriotis',last_part='gmail.com')
-      # Enter your address
+    Contact_1 = Contact(name='Name',first_part='first part of email',last_part='part after the @')
+    .
+    .
+    .
+    .
+    .
+      # Enter your contacts
 
     r = sr.Recognizer()
 
@@ -44,37 +42,11 @@ def Send_email():
             print('You said: ', Before)
             SpeakText(Before)
 
-            if (Before=='Panos'or 'panos'):
-                Before = Panos.first_part
-                After = Panos.last_part
+            if (Before=='Name 1'or 'alias'):
+                Before = Contact_1.first_part
+                After = Contact_1.last_part
 
-            if (Before=='Mom'or 'mom'):
-                Before = Mom.first_part
-                After = Mom.last_part
-
-            if (Before=='Dad' or 'dad'):
-                Before = Dad.first_part
-                After = Dad.last_part
-
-            if (Before=='stavros'or 'Stavros' or 'Me' or 'me'):
-                Before = Stavros.first_part
-                After = Stavros.last_part
-
-            if (Before == 'Leo' or 'leo'):
-                Before = Leo.first_part
-                After = Leo.last_part
-
-            if (Before == 'Elias' or 'elias'):
-                Before = Elias.first_part
-                After = Elias.last_part
-
-            if (Before == 'Karolos'or 'karolos'):
-                Before = Karolos.first_part
-                After = Karolos.last_part
-
-            if 'anton' in Before:
-                Before = AntonisMag.first_part
-                After = AntonisMag.last_part
+           
 
         with sr.Microphone() as source:
             SpeakText('Is this correct?')
@@ -119,10 +91,10 @@ def Send_email():
 
     port = 465  # For SSL
     smtp_server = "smtp.gmail.com"
-    sender_email = 'stavrosklaoudatos@gmail.com'
+    sender_email = 'ypur email'
     receiver_email = Before + '@'+After
     print(receiver_email)
-    password = 'Miriki100'
+    password = 'Your Email Password'
 
 
 
